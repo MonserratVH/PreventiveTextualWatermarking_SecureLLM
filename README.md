@@ -39,9 +39,9 @@ The watermark insertion process is performed by the `Encoder` module. Given a cl
    This corpus-based key derivation is **used exclusively for experimental reproducibility** and controlled evaluation.  
    In practical deployments, **any standard cryptographic key management scheme** (e.g., pre-shared keys, HSM-backed keys, or KMS-managed secrets) can be used without modifying the watermarking logic.
 
-2. **Determines instance-level and term-level hash table sizes** based on the secret key and input statistics.
+2. **Determines instance-level and term-level hash table sizes** based on the secret key using hash tables and hash functions.
 
-3. **Distributes characters across hash tables**, inserting invisible Unicode whitespace markers into unused slots.
+3. **Distributes characters across hash tables**, inserting invisible Unicode markers into unused slots.
 
 4. **Produces a watermarked request**, which is visually identical to the original text but contains a hidden structural signature.
 
@@ -94,3 +94,9 @@ This pipeline enforces **prompt-level authorization**, independent of the LLM pr
 .
 ├── watermarked_belt.py   # Encoder, verifier, pipeline, and mock LLM
 ├── README.md             # Project documentation
+
+
+---
+
+
+
