@@ -100,7 +100,7 @@ This pipeline enforces **prompt-level authorization**, independent of the LLM pr
 ---
 
 #### Usage Example
-```text
+```python
 # Clean user request
 raw_text = "Explain why gradient masking does not guarantee robustness."
 
