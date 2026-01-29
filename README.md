@@ -103,17 +103,17 @@ This pipeline enforces **prompt-level authorization**, independent of the LLM pr
 # Clean user request
 raw_text = "Explain why gradient masking does not guarantee robustness."
 
-# Encode the request (insert watermark)
+#### Encode the request (insert watermark)
 encoder = Encoder(raw_text, session_id=42)
 meta_request = encoder.meta_request
 
-# Verify the watermark
+#### Verify the watermark
 belt = BeltVerifier(meta_request)
 verification = belt.as_result()
 
 print("Verification status:", verification.status)
 
-# If valid, extract clean text for the LLM
+#### If valid, extract clean text for the LLM
 if verification.status == "VALID":
     clean_text = belt.decode_visible_text()
     print("Text passed to LLM:", clean_text)
@@ -156,7 +156,7 @@ It can be used as:
 
 
 ---
-## Researchers
+#### Researchers
 
 - _Monserrat Vázquez-Hernández_  
     mvazquez@inaoe.mx  
@@ -170,5 +170,5 @@ It can be used as:
     villasen@inaoep.mx  
     https://orcid.org/0000-0003-1294-9128
 
-## Acknowledgements
+#### Acknowledgements
 - This work is supported by CONAHCYT/México scholarship 814461. Besides, it was founded by Catedras-CONAHCYT projects 882 and 613
