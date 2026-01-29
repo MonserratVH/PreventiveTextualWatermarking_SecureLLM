@@ -10,9 +10,9 @@ In this project, we propose a **preventive textual watermarking mechanism** desi
 
 The proposed approach is **model-agnostic**, requires no access to gradients or internal model parameters, and operates independently of the downstream LLM architecture.
 
----
 
-#### Preventive Watermarking Mechanism
+
+## Preventive Watermarking Mechanism
 
 We assume that **not all prompts reaching an LLM should be trusted by default**. Instead, requests must be generated through an authorized mechanism that embeds a verifiable structure into the text itself.
 
@@ -141,8 +141,8 @@ else:
 
 These limitations are consistent with the explicit threat model considered in adversarial NLP research and are intentionally scoped. 
 
----
-#### Research Context
+
+## Research Context
 
 This project contributes to research on:
 
@@ -157,7 +157,6 @@ It can be used as:
 - or a baseline for further defensive designs.
 
 
----
 ## Researchers
 
 - _Monserrat Vázquez-Hernández_  
