@@ -128,7 +128,6 @@ else:
 - Preventive rather than reactive
 - LLM-agnostic
 - Independent of model internals
-- Robust to benign text normalization
 - Lightweight and modular
 - Compatible with adversarial NLP threat models
 
