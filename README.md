@@ -158,7 +158,7 @@ It can be used as:
 
 
 ---
-#### Researchers
+## Researchers
 
 - _Monserrat Vázquez-Hernández_  
     mvazquez@inaoe.mx  
@@ -172,5 +172,5 @@ It can be used as:
     villasen@inaoep.mx  
     https://orcid.org/0000-0003-1294-9128
 
-#### Acknowledgements
+## Acknowledgements
 - This work is supported by CONAHCYT/México scholarship 814461. Besides, it was founded by Catedras-CONAHCYT projects 882 and 613
