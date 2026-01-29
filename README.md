@@ -100,6 +100,7 @@ This pipeline enforces **prompt-level authorization**, independent of the LLM pr
 ---
 
 #### Usage Example
+```text
 # Clean user request
 raw_text = "Explain why gradient masking does not guarantee robustness."
 
@@ -119,6 +120,7 @@ if verification.status == "VALID":
     print("Text passed to LLM:", clean_text)
 else:
     print("Request blocked.")
+```
 
 ---
 
