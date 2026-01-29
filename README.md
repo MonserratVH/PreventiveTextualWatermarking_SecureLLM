@@ -1,4 +1,4 @@
-# 🔐 Preventive Textual Watermarking for Secure LLM Request Pipelines
+# Preventive Textual Watermarking for Secure LLM Request Pipelines
 
 ## Abstract
 
