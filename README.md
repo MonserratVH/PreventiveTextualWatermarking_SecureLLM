@@ -1,6 +1,6 @@
 # Preventive Textual Watermarking for Secure LLM Request Pipelines
 
-## Abstract
+#### Abstract
 
 Large Language Models (LLMs) are increasingly deployed as general-purpose reasoning engines across diverse domains. However, current interaction paradigms implicitly assume that all incoming requests are trustworthy, well-formed, and authorized. This assumption exposes LLM-based systems to a wide range of risks, including prompt tampering, unauthorized access, replay attacks, and uncontrolled prompt manipulation.
 
@@ -12,7 +12,7 @@ The proposed approach is **model-agnostic**, requires no access to gradients or 
 
 ---
 
-## Preventive Watermarking Mechanism
+#### Preventive Watermarking Mechanism
 
 We assume that **not all prompts reaching an LLM should be trusted by default**. Instead, requests must be generated through an authorized mechanism that embeds a verifiable structure into the text itself.
 
@@ -31,7 +31,7 @@ The proposed mechanism relies on three core principles:
 
 ---
 
-## Watermark Encoding Process
+#### Watermark Encoding Process
 
 The watermark insertion process is performed by the `Encoder` module. Given a clean user request, the encoder:
 
@@ -54,7 +54,7 @@ The output of this process is wrapped into a `MarkedRequest` object, which inclu
 
 ---
 
-## Belt Verification (Preventive Gate)
+#### Belt Verification (Preventive Gate)
 
 The `BeltVerifier` acts as a **preventive security belt** placed immediately before the LLM.
 
@@ -70,7 +70,7 @@ Only requests with an exact match are allowed to proceed. This design ensures th
 
 ---
 
-## End-to-End Pipeline
+#### End-to-End Pipeline
 
 The full pipeline is implemented in `WatermarkedLLMPipeline` and follows this sequence:
 
@@ -88,7 +88,7 @@ This pipeline enforces **prompt-level authorization**, independent of the LLM pr
 
 ---
 
-## Repository Structure
+#### Repository Structure
 
 ```text
 .
