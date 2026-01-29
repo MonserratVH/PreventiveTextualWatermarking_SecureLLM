@@ -16,7 +16,7 @@ The proposed approach is **model-agnostic**, requires no access to gradients or 
 
 We assume that **not all prompts reaching an LLM should be trusted by default**. Instead, requests must be generated through an authorized mechanism that embeds a verifiable structure into the text itself.
 
-Our hypothesis is that **lightweight, invisible textual watermarks**, when combined with deterministic reconstruction, can serve as a preventive gate that enforces request integrity *before* model execution. Unlike cryptographic authentication or API-level checks, this mechanism operates directly at the **textual level**, making it compatible with any LLM interface.
+Our hypothesis is that **invisible textual watermarks**, when combined with deterministic reconstruction, can serve as a preventive gate that enforces request integrity *before* model execution. Unlike cryptographic authentication or API-level checks, this mechanism operates directly at the **textual level**, making it compatible with any LLM interface.
 
 The proposed mechanism relies on three core principles:
 
@@ -32,6 +32,7 @@ The proposed mechanism relies on three core principles:
 ---
 
 #### Watermark Encoding Process
+![Preventive Textual Watermarking for Secure LLM](https://github.com/MonserratVH/PreventiveTextualWatermarking_SecureLLM/blob/main/Figures/LLM_SafetyBelt.jpg)
 
 The watermark insertion process is performed by the `Encoder` module. Given a clean user request, the encoder:
 
