@@ -95,8 +95,80 @@ This pipeline enforces **prompt-level authorization**, independent of the LLM pr
 ├── watermarked_belt.py   # Encoder, verifier, pipeline, and mock LLM
 ├── README.md             # Project documentation
 
+```
 
 ---
 
+#### Usage Example
+# Clean user request
+raw_text = "Explain why gradient masking does not guarantee robustness."
+
+# Encode the request (insert watermark)
+encoder = Encoder(raw_text, session_id=42)
+meta_request = encoder.meta_request
+
+# Verify the watermark
+belt = BeltVerifier(meta_request)
+verification = belt.as_result()
+
+print("Verification status:", verification.status)
+
+# If valid, extract clean text for the LLM
+if verification.status == "VALID":
+    clean_text = belt.decode_visible_text()
+    print("Text passed to LLM:", clean_text)
+else:
+    print("Request blocked.")
+
+---
+
+#### Design Characteristics
+- Preventive rather than reactive
+- LLM-agnostic
+- Independent of model internals
+- Robust to benign text normalization
+- Lightweight and modular
+- Compatible with adversarial NLP threat models
+
+--- 
+
+#### Limitations and Assumptions 
+- This mechanism does not provide cryptographic authentication.
+- It assumes a trusted execution environment for the encoder and verifier.
+- Compromise of the secret key would invalidate the verification process.
+
+These limitations are consistent with the explicit threat model considered in adversarial NLP research and are intentionally scoped. 
+
+---
+#### Research Context
+
+This project contributes to research on:
+
+- Adversarial NLP
+- Preventive defense mechanisms
+- Textual watermarking
+- Integrity and provenance in LLM request pipelines
+
+It can be used as:
+- a research prototype,
+- a teaching artifact,
+- or a baseline for further defensive designs.
 
 
+---
+## Researchers
+
+- _Monserrat Vázquez-Hernández_  
+    mvazquez@inaoe.mx  
+    https://orcid.org/0000-0001-9206-5706  
+
+- _Ignacio Algredo-Badillo_  
+    algredobadillo@inaoep.mx  
+    https://orcid.org/0000-0002-4748-3500
+
+- _Luis Villaseñor-Pineda_  
+    villasen@inaoep.mx  
+    https://orcid.org/0000-0003-1294-9128
+
+## Acknowledgements
+- This work is supported by CONAHCYT/México scholarship 814461. Besides, it was founded by Catedras-CONAHCYT projects 882 and 613
