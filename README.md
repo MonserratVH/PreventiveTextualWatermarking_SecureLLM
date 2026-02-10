@@ -93,6 +93,7 @@ This pipeline enforces **prompt-level authorization**, independent of the LLM pr
 
 ```text
 .
+├── Figures
 ├── watermarked_belt.ipynb   # Encoder, verifier, pipeline, and mock LLM
 ├── README.md             # Project documentation
 
