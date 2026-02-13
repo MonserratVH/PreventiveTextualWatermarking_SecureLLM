@@ -164,9 +164,9 @@ It can be used as:
     mvazquez@inaoe.mx  
     https://orcid.org/0000-0001-9206-5706
 
-- _Luis Alberto Morales-Rosales_
+- _Luis Alberto Morales-Rosales_  
     lamorales@conacyt.mx  
-    https://orcid.org/0000-0002-4753-9375
+    [https://orcid.org/0000-0002-4753-9375](https://orcid.org/0000-0002-4753-9375)
   
 
 - _Ignacio Algredo-Badillo_  
